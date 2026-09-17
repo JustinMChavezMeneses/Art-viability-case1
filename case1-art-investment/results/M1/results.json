@@ -1,0 +1,986 @@
+{
+  "methodology": {
+    "frequency": "quarterly, aligned to supplied ARTDAI quarter ends",
+    "return_convention": "log returns except DGS10 (quarterly percentage-point yield change) and VIX (quarter-end level, per brief)",
+    "primary_art_series": "ARTKAART / All Traded Artists",
+    "data_failures_after_one_retry": [
+      "FRED GOLDAMGBD228NLBM: Unable to read URL: https://fred.stlouisfed.org/graph/fredgraph.csv?id=GOLDAMGBD228NLBM"
+    ]
+  },
+  "corr_returns": {
+    "values": {
+      "All Traded Art": {
+        "All Traded Art": 1.0,
+        "S&P 500": 0.18918886820479305,
+        "Gold": null,
+        "10Y yield change (pp)": 0.035645381068463884,
+        "IEF": -0.19715564027492763,
+        "CPI inflation": -0.0025236659349125432,
+        "REITs": 0.12342504921130965,
+        "Home prices": 0.08961372158029556,
+        "VIX level": -0.14252562468504276
+      },
+      "S&P 500": {
+        "All Traded Art": 0.18918886820479305,
+        "S&P 500": 1.0,
+        "Gold": null,
+        "10Y yield change (pp)": 0.04008750099472952,
+        "IEF": -0.32044735379191897,
+        "CPI inflation": 0.041583129226951725,
+        "REITs": 0.7496758794950404,
+        "Home prices": 0.06077941642005038,
+        "VIX level": -0.5467788899062166
+      },
+      "Gold": {
+        "All Traded Art": null,
+        "S&P 500": null,
+        "Gold": null,
+        "10Y yield change (pp)": null,
+        "IEF": null,
+        "CPI inflation": null,
+        "REITs": null,
+        "Home prices": null,
+        "VIX level": null
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": 0.035645381068463884,
+        "S&P 500": 0.04008750099472952,
+        "Gold": null,
+        "10Y yield change (pp)": 1.0,
+        "IEF": -0.9877327922681891,
+        "CPI inflation": 0.2734965950803081,
+        "REITs": 0.09908438540907652,
+        "Home prices": 0.14057851448936468,
+        "VIX level": -0.2599456959501945
+      },
+      "IEF": {
+        "All Traded Art": -0.19715564027492763,
+        "S&P 500": -0.32044735379191897,
+        "Gold": null,
+        "10Y yield change (pp)": -0.9877327922681891,
+        "IEF": 1.0,
+        "CPI inflation": -0.4667308324912371,
+        "REITs": -0.09232091522195286,
+        "Home prices": -0.2224857881172925,
+        "VIX level": 0.28055347079989784
+      },
+      "CPI inflation": {
+        "All Traded Art": -0.0025236659349125432,
+        "S&P 500": 0.041583129226951725,
+        "Gold": null,
+        "10Y yield change (pp)": 0.2734965950803081,
+        "IEF": -0.4667308324912371,
+        "CPI inflation": 1.0,
+        "REITs": 0.23424107498661065,
+        "Home prices": 0.274223311535836,
+        "VIX level": -0.14833595626175208
+      },
+      "REITs": {
+        "All Traded Art": 0.12342504921130965,
+        "S&P 500": 0.7496758794950404,
+        "Gold": null,
+        "10Y yield change (pp)": 0.09908438540907652,
+        "IEF": -0.09232091522195286,
+        "CPI inflation": 0.23424107498661065,
+        "REITs": 1.0,
+        "Home prices": 0.22360450726499376,
+        "VIX level": -0.49848475106668855
+      },
+      "Home prices": {
+        "All Traded Art": 0.08961372158029556,
+        "S&P 500": 0.06077941642005038,
+        "Gold": null,
+        "10Y yield change (pp)": 0.14057851448936468,
+        "IEF": -0.2224857881172925,
+        "CPI inflation": 0.274223311535836,
+        "REITs": 0.22360450726499376,
+        "Home prices": 1.0,
+        "VIX level": -0.20347461054506108
+      },
+      "VIX level": {
+        "All Traded Art": -0.14252562468504276,
+        "S&P 500": -0.5467788899062166,
+        "Gold": null,
+        "10Y yield change (pp)": -0.2599456959501945,
+        "IEF": 0.28055347079989784,
+        "CPI inflation": -0.14833595626175208,
+        "REITs": -0.49848475106668855,
+        "Home prices": -0.20347461054506108,
+        "VIX level": 1.0
+      }
+    },
+    "n_obs_by_pair": {
+      "All Traded Art": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "S&P 500": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "Gold": {
+        "All Traded Art": 0,
+        "S&P 500": 0,
+        "Gold": 0,
+        "10Y yield change (pp)": 0,
+        "IEF": 0,
+        "CPI inflation": 0,
+        "REITs": 0,
+        "Home prices": 0,
+        "VIX level": 0
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "IEF": {
+        "All Traded Art": 95,
+        "S&P 500": 95,
+        "Gold": 0,
+        "10Y yield change (pp)": 95,
+        "IEF": 95,
+        "CPI inflation": 95,
+        "REITs": 87,
+        "Home prices": 95,
+        "VIX level": 95
+      },
+      "CPI inflation": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "REITs": {
+        "All Traded Art": 87,
+        "S&P 500": 87,
+        "Gold": 0,
+        "10Y yield change (pp)": 87,
+        "IEF": 87,
+        "CPI inflation": 87,
+        "REITs": 87,
+        "Home prices": 87,
+        "VIX level": 87
+      },
+      "Home prices": {
+        "All Traded Art": 157,
+        "S&P 500": 157,
+        "Gold": 0,
+        "10Y yield change (pp)": 157,
+        "IEF": 95,
+        "CPI inflation": 157,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "VIX level": {
+        "All Traded Art": 146,
+        "S&P 500": 146,
+        "Gold": 0,
+        "10Y yield change (pp)": 146,
+        "IEF": 95,
+        "CPI inflation": 146,
+        "REITs": 87,
+        "Home prices": 146,
+        "VIX level": 146
+      }
+    },
+    "sample_period_by_pair": {
+      "All Traded Art": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "S&P 500": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "Gold": {
+        "All Traded Art": null,
+        "S&P 500": null,
+        "Gold": null,
+        "10Y yield change (pp)": null,
+        "IEF": null,
+        "CPI inflation": null,
+        "REITs": null,
+        "Home prices": null,
+        "VIX level": null
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "IEF": {
+        "All Traded Art": "2002-12-31 to 2026-06-30",
+        "S&P 500": "2002-12-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "2002-12-31 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "2002-12-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "2002-12-31 to 2026-06-30",
+        "VIX level": "2002-12-31 to 2026-06-30"
+      },
+      "CPI inflation": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "REITs": {
+        "All Traded Art": "2004-12-31 to 2026-06-30",
+        "S&P 500": "2004-12-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "2004-12-31 to 2026-06-30",
+        "IEF": "2004-12-31 to 2026-06-30",
+        "CPI inflation": "2004-12-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "2004-12-31 to 2026-06-30",
+        "VIX level": "2004-12-31 to 2026-06-30"
+      },
+      "Home prices": {
+        "All Traded Art": "1987-06-30 to 2026-06-30",
+        "S&P 500": "1987-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1987-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1987-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "VIX level": {
+        "All Traded Art": "1990-03-31 to 2026-06-30",
+        "S&P 500": "1990-03-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1990-03-31 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1990-03-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1990-03-31 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      }
+    },
+    "sample_period": "1980-06-30 to 2026-06-30",
+    "n_obs": 185,
+    "real_or_nominal": "nominal",
+    "method": "Pearson"
+  },
+  "corr_spearman": {
+    "values": {
+      "All Traded Art": {
+        "All Traded Art": 1.0,
+        "S&P 500": 0.22951366513778856,
+        "Gold": null,
+        "10Y yield change (pp)": 0.07694505586674709,
+        "IEF": -0.22403415453527437,
+        "CPI inflation": 0.03878738486031614,
+        "REITs": 0.12101771524385799,
+        "Home prices": 0.10468000917892073,
+        "VIX level": -0.12975875449021632
+      },
+      "S&P 500": {
+        "All Traded Art": 0.22951366513778856,
+        "S&P 500": 1.0,
+        "Gold": null,
+        "10Y yield change (pp)": -0.02168578219056783,
+        "IEF": -0.16377379619260918,
+        "CPI inflation": -0.04584739016716576,
+        "REITs": 0.6097360938980827,
+        "Home prices": -0.05527198754643728,
+        "VIX level": -0.2714077073272798
+      },
+      "Gold": {
+        "All Traded Art": null,
+        "S&P 500": null,
+        "Gold": null,
+        "10Y yield change (pp)": null,
+        "IEF": null,
+        "CPI inflation": null,
+        "REITs": null,
+        "Home prices": null,
+        "VIX level": null
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": 0.07694505586674709,
+        "S&P 500": -0.02168578219056783,
+        "Gold": null,
+        "10Y yield change (pp)": 1.0,
+        "IEF": -0.9798866816763454,
+        "CPI inflation": 0.2827500753562827,
+        "REITs": -0.22184148005396315,
+        "Home prices": 0.09279182552834705,
+        "VIX level": -0.0485881676411023
+      },
+      "IEF": {
+        "All Traded Art": -0.22403415453527437,
+        "S&P 500": -0.16377379619260918,
+        "Gold": null,
+        "10Y yield change (pp)": -0.9798866816763454,
+        "IEF": 1.0,
+        "CPI inflation": -0.37883538633818586,
+        "REITs": 0.21493402347452067,
+        "Home prices": -0.15643896976483762,
+        "VIX level": 0.0739929380598383
+      },
+      "CPI inflation": {
+        "All Traded Art": 0.03878738486031614,
+        "S&P 500": -0.04584739016716576,
+        "Gold": null,
+        "10Y yield change (pp)": 0.2827500753562827,
+        "IEF": -0.37883538633818586,
+        "CPI inflation": 1.0,
+        "REITs": -0.062240285776773346,
+        "Home prices": 0.11111455665192664,
+        "VIX level": 0.032448846793811985
+      },
+      "REITs": {
+        "All Traded Art": 0.12101771524385799,
+        "S&P 500": 0.6097360938980827,
+        "Gold": null,
+        "10Y yield change (pp)": -0.22184148005396315,
+        "IEF": 0.21493402347452067,
+        "CPI inflation": -0.062240285776773346,
+        "REITs": 1.0,
+        "Home prices": 0.019082160822337244,
+        "VIX level": -0.20440244410003724
+      },
+      "Home prices": {
+        "All Traded Art": 0.10468000917892073,
+        "S&P 500": -0.05527198754643728,
+        "Gold": null,
+        "10Y yield change (pp)": 0.09279182552834705,
+        "IEF": -0.15643896976483762,
+        "CPI inflation": 0.11111455665192664,
+        "REITs": 0.019082160822337244,
+        "Home prices": 1.0,
+        "VIX level": -0.06857253030711331
+      },
+      "VIX level": {
+        "All Traded Art": -0.12975875449021632,
+        "S&P 500": -0.2714077073272798,
+        "Gold": null,
+        "10Y yield change (pp)": -0.0485881676411023,
+        "IEF": 0.0739929380598383,
+        "CPI inflation": 0.032448846793811985,
+        "REITs": -0.20440244410003724,
+        "Home prices": -0.06857253030711331,
+        "VIX level": 1.0
+      }
+    },
+    "n_obs_by_pair": {
+      "All Traded Art": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "S&P 500": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "Gold": {
+        "All Traded Art": 0,
+        "S&P 500": 0,
+        "Gold": 0,
+        "10Y yield change (pp)": 0,
+        "IEF": 0,
+        "CPI inflation": 0,
+        "REITs": 0,
+        "Home prices": 0,
+        "VIX level": 0
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "IEF": {
+        "All Traded Art": 95,
+        "S&P 500": 95,
+        "Gold": 0,
+        "10Y yield change (pp)": 95,
+        "IEF": 95,
+        "CPI inflation": 95,
+        "REITs": 87,
+        "Home prices": 95,
+        "VIX level": 95
+      },
+      "CPI inflation": {
+        "All Traded Art": 185,
+        "S&P 500": 185,
+        "Gold": 0,
+        "10Y yield change (pp)": 185,
+        "IEF": 95,
+        "CPI inflation": 185,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "REITs": {
+        "All Traded Art": 87,
+        "S&P 500": 87,
+        "Gold": 0,
+        "10Y yield change (pp)": 87,
+        "IEF": 87,
+        "CPI inflation": 87,
+        "REITs": 87,
+        "Home prices": 87,
+        "VIX level": 87
+      },
+      "Home prices": {
+        "All Traded Art": 157,
+        "S&P 500": 157,
+        "Gold": 0,
+        "10Y yield change (pp)": 157,
+        "IEF": 95,
+        "CPI inflation": 157,
+        "REITs": 87,
+        "Home prices": 157,
+        "VIX level": 146
+      },
+      "VIX level": {
+        "All Traded Art": 146,
+        "S&P 500": 146,
+        "Gold": 0,
+        "10Y yield change (pp)": 146,
+        "IEF": 95,
+        "CPI inflation": 146,
+        "REITs": 87,
+        "Home prices": 146,
+        "VIX level": 146
+      }
+    },
+    "sample_period_by_pair": {
+      "All Traded Art": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "S&P 500": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "Gold": {
+        "All Traded Art": null,
+        "S&P 500": null,
+        "Gold": null,
+        "10Y yield change (pp)": null,
+        "IEF": null,
+        "CPI inflation": null,
+        "REITs": null,
+        "Home prices": null,
+        "VIX level": null
+      },
+      "10Y yield change (pp)": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "IEF": {
+        "All Traded Art": "2002-12-31 to 2026-06-30",
+        "S&P 500": "2002-12-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "2002-12-31 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "2002-12-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "2002-12-31 to 2026-06-30",
+        "VIX level": "2002-12-31 to 2026-06-30"
+      },
+      "CPI inflation": {
+        "All Traded Art": "1980-06-30 to 2026-06-30",
+        "S&P 500": "1980-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1980-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1980-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "REITs": {
+        "All Traded Art": "2004-12-31 to 2026-06-30",
+        "S&P 500": "2004-12-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "2004-12-31 to 2026-06-30",
+        "IEF": "2004-12-31 to 2026-06-30",
+        "CPI inflation": "2004-12-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "2004-12-31 to 2026-06-30",
+        "VIX level": "2004-12-31 to 2026-06-30"
+      },
+      "Home prices": {
+        "All Traded Art": "1987-06-30 to 2026-06-30",
+        "S&P 500": "1987-06-30 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1987-06-30 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1987-06-30 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1987-06-30 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      },
+      "VIX level": {
+        "All Traded Art": "1990-03-31 to 2026-06-30",
+        "S&P 500": "1990-03-31 to 2026-06-30",
+        "Gold": null,
+        "10Y yield change (pp)": "1990-03-31 to 2026-06-30",
+        "IEF": "2002-12-31 to 2026-06-30",
+        "CPI inflation": "1990-03-31 to 2026-06-30",
+        "REITs": "2004-12-31 to 2026-06-30",
+        "Home prices": "1990-03-31 to 2026-06-30",
+        "VIX level": "1990-03-31 to 2026-06-30"
+      }
+    },
+    "sample_period": "1980-06-30 to 2026-06-30",
+    "n_obs": 185,
+    "real_or_nominal": "nominal",
+    "method": "Spearman rank"
+  },
+  "art_sp_returns_corr": {
+    "value": 0.18918886820479305,
+    "sample_period": "1980-06-30 to 2026-06-30",
+    "n_obs": 185,
+    "real_or_nominal": "nominal",
+    "method": "Pearson quarterly log returns"
+  },
+  "art_sp_levels_corr_spurious": {
+    "value": 0.619705357817792,
+    "sample_period": "1980-03-31 to 2026-06-30",
+    "n_obs": 186,
+    "real_or_nominal": "nominal",
+    "method": "Pearson quarter-end price/index levels",
+    "label": "spurious (levels)"
+  },
+  "rolling_corr_sp": {
+    "window_quarters": 20,
+    "values": {
+      "1985-03-31": 0.08995546621651666,
+      "1985-06-30": 0.062449560266670805,
+      "1985-09-30": 0.08118158180060871,
+      "1985-12-31": 0.2246401991107099,
+      "1986-03-31": 0.16869712350230498,
+      "1986-06-30": 0.119117307881619,
+      "1986-09-30": 0.3097437677518265,
+      "1986-12-31": 0.3804645295709865,
+      "1987-03-31": 0.39091739847329404,
+      "1987-06-30": 0.3370614255047995,
+      "1987-09-30": 0.3094084699704628,
+      "1987-12-31": 0.20257565527455904,
+      "1988-03-31": 0.23672593478028,
+      "1988-06-30": 0.2097933797729769,
+      "1988-09-30": 0.19924775860069824,
+      "1988-12-31": 0.2039763576282052,
+      "1989-03-31": 0.1728375906304201,
+      "1989-06-30": 0.15956421457690395,
+      "1989-09-30": 0.20101316737313293,
+      "1989-12-31": 0.19754438646062578,
+      "1990-03-31": 0.2100891020797585,
+      "1990-06-30": 0.19548600024418641,
+      "1990-09-30": 0.2717519743390696,
+      "1990-12-31": 0.14762199008421326,
+      "1991-03-31": 0.17118144008909025,
+      "1991-06-30": 0.14559449325397986,
+      "1991-09-30": 0.058994309340545247,
+      "1991-12-31": 0.04596175095376853,
+      "1992-03-31": 0.1697186417303988,
+      "1992-06-30": 0.1637278854545032,
+      "1992-09-30": 0.13977714653396303,
+      "1992-12-31": 0.2845786905059108,
+      "1993-03-31": 0.2799886199098416,
+      "1993-06-30": 0.21641917030134827,
+      "1993-09-30": 0.23222762775381334,
+      "1993-12-31": 0.23546063203226172,
+      "1994-03-31": 0.2302776459247252,
+      "1994-06-30": 0.2749239208889091,
+      "1994-09-30": 0.19896925822783876,
+      "1994-12-31": 0.1934948631061115,
+      "1995-03-31": 0.1745983395559483,
+      "1995-06-30": 0.25909274353655537,
+      "1995-09-30": -0.14858359388753647,
+      "1995-12-31": -0.05914566166773446,
+      "1996-03-31": -0.04687536575208339,
+      "1996-06-30": 0.001124169159603704,
+      "1996-09-30": 0.023549054062181923,
+      "1996-12-31": 0.06471698099162057,
+      "1997-03-31": 0.027654801083526512,
+      "1997-06-30": 0.23499338338810982,
+      "1997-09-30": 0.1597010602490766,
+      "1997-12-31": 0.12216625371048806,
+      "1998-03-31": 0.04601500122333816,
+      "1998-06-30": 0.09038037940113283,
+      "1998-09-30": 0.10180208442780671,
+      "1998-12-31": 0.13563326471413603,
+      "1999-03-31": 0.10003798590626194,
+      "1999-06-30": 0.11595162092666747,
+      "1999-09-30": 0.17349893853783377,
+      "1999-12-31": 0.25377632849554616,
+      "2000-03-31": 0.27728362731176226,
+      "2000-06-30": 0.24527475756092595,
+      "2000-09-30": 0.3604313212844452,
+      "2000-12-31": 0.3145912238772768,
+      "2001-03-31": 0.35552100441446616,
+      "2001-06-30": 0.36132356703479096,
+      "2001-09-30": 0.4286942432980226,
+      "2001-12-31": 0.41254832445921313,
+      "2002-03-31": 0.41140314429504826,
+      "2002-06-30": 0.37592749515996965,
+      "2002-09-30": 0.40573408645229203,
+      "2002-12-31": 0.44511030683706754,
+      "2003-03-31": 0.5353814707966769,
+      "2003-06-30": 0.30343995336632895,
+      "2003-09-30": 0.29528326689946555,
+      "2003-12-31": 0.30513579376551264,
+      "2004-03-31": 0.3039007236447844,
+      "2004-06-30": 0.2853352344620972,
+      "2004-09-30": 0.2681762153048361,
+      "2004-12-31": 0.18042786196103516,
+      "2005-03-31": 0.20897647889061852,
+      "2005-06-30": 0.21417697982503023,
+      "2005-09-30": 0.21956370169050551,
+      "2005-12-31": 0.24996901906386315,
+      "2006-03-31": 0.21842641979279181,
+      "2006-06-30": 0.18259051546528035,
+      "2006-09-30": 0.01505940369876029,
+      "2006-12-31": 0.039814297144612605,
+      "2007-03-31": 0.04675051380545152,
+      "2007-06-30": -0.0863969469649917,
+      "2007-09-30": -0.10422137375507248,
+      "2007-12-31": -0.1871320202007752,
+      "2008-03-31": -0.03174230972202279,
+      "2008-06-30": 0.3928830097489113,
+      "2008-09-30": 0.609389609845464,
+      "2008-12-31": 0.40438444179682925,
+      "2009-03-31": 0.45081594400060426,
+      "2009-06-30": 0.4044417745546182,
+      "2009-09-30": 0.3884646103696103,
+      "2009-12-31": 0.3723259408679504,
+      "2010-03-31": 0.3187792643293293,
+      "2010-06-30": 0.22684820937509803,
+      "2010-09-30": 0.16548768366125818,
+      "2010-12-31": 0.20585662278132252,
+      "2011-03-31": 0.19767506483724953,
+      "2011-06-30": 0.21271412033046494,
+      "2011-09-30": 0.2993109956744096,
+      "2011-12-31": 0.34401871367145787,
+      "2012-03-31": 0.2643428404235699,
+      "2012-06-30": 0.24445069633085065,
+      "2012-09-30": 0.20793898144371797,
+      "2012-12-31": 0.21660787660341446,
+      "2013-03-31": 0.17814191870744794,
+      "2013-06-30": 0.20355358792081601,
+      "2013-09-30": 0.07260786120776545,
+      "2013-12-31": 0.12820326348341232,
+      "2014-03-31": 0.07822960651690862,
+      "2014-06-30": 0.0884874954206299,
+      "2014-09-30": 0.1037017498754279,
+      "2014-12-31": 0.09304768514457454,
+      "2015-03-31": 0.12383439584146262,
+      "2015-06-30": 0.23523632452874255,
+      "2015-09-30": 0.38549024629549167,
+      "2015-12-31": 0.36723158035467257,
+      "2016-03-31": 0.3660623267982108,
+      "2016-06-30": 0.36141061973107363,
+      "2016-09-30": 0.25275300102257475,
+      "2016-12-31": 0.12022687070911749,
+      "2017-03-31": 0.2495466531942612,
+      "2017-06-30": 0.30907927078642117,
+      "2017-09-30": 0.36241013852346177,
+      "2017-12-31": 0.4569517425247616,
+      "2018-03-31": 0.5641001474191897,
+      "2018-06-30": 0.561921129010003,
+      "2018-09-30": 0.4907189007617948,
+      "2018-12-31": 0.11261524425928834,
+      "2019-03-31": 0.06255356776194376,
+      "2019-06-30": 0.06400093097107552,
+      "2019-09-30": 0.06279146454835736,
+      "2019-12-31": 0.11135987487125198,
+      "2020-03-31": 0.13692972861440028,
+      "2020-06-30": 0.06954824691747122,
+      "2020-09-30": 0.029749269431268394,
+      "2020-12-31": 0.025589339267771807,
+      "2021-03-31": 0.011520235641043403,
+      "2021-06-30": 0.024648842837486765,
+      "2021-09-30": 0.03368413299534094,
+      "2021-12-31": 0.03744369170397441,
+      "2022-03-31": 0.05158588809155455,
+      "2022-06-30": 0.052446776647159195,
+      "2022-09-30": 0.10881284587192475,
+      "2022-12-31": 0.10322260564156685,
+      "2023-03-31": 0.07503897254106245,
+      "2023-06-30": 0.09041532892954394,
+      "2023-09-30": 0.1696318331037485,
+      "2023-12-31": 0.29660075597576147,
+      "2024-03-31": 0.3137059874189008,
+      "2024-06-30": 0.3230418370617205,
+      "2024-09-30": 0.333233184171194,
+      "2024-12-31": 0.31484618816364757,
+      "2025-03-31": 0.22873719272470985,
+      "2025-06-30": 0.4093442107844857,
+      "2025-09-30": 0.36329129709511254,
+      "2025-12-31": 0.32912405994277943,
+      "2026-03-31": 0.339982321212686,
+      "2026-06-30": 0.421076687315683
+    },
+    "sample_period": "1985-03-31 to 2026-06-30",
+    "n_obs": 166,
+    "real_or_nominal": "nominal"
+  },
+  "rolling_corr_gold": {
+    "window_quarters": 20,
+    "values": {},
+    "sample_period": null,
+    "n_obs": 0,
+    "real_or_nominal": "nominal"
+  },
+  "art_60_40_corr": {
+    "value": 0.1144172468873838,
+    "sample_period": "2002-12-31 to 2026-06-30",
+    "n_obs": 95,
+    "real_or_nominal": "nominal",
+    "method": "Pearson correlation: art log return vs 60/40 log return"
+  },
+  "marginal_var_contribution_4pct": {
+    "definition": "At 4% art, component variance contribution = w_art \u00d7 Cov(r_art, r_portfolio); portfolio holds 57.6% S&P, 38.4% IEF, 4.0% art.",
+    "component_variance_contribution": 4.6704985110411354e-05,
+    "component_share_of_portfolio_variance": 0.025146276357613077,
+    "portfolio_variance_at_4pct_art": 0.0018573320537086733,
+    "base_60_40_variance": 0.0019354541486279208,
+    "variance_change_vs_base": -7.81220949192475e-05,
+    "variance_change_vs_base_pct": -0.04036370222184271,
+    "sample_period": "2002-12-31 to 2026-06-30",
+    "n_obs": 95,
+    "real_or_nominal": "nominal"
+  },
+  "robustness_art_variants": {
+    "ARTKSIX_quarterly": {
+      "frequency": "quarterly",
+      "correlations": {
+        "S&P 500": {
+          "value": 0.0757840444949504,
+          "sample_period": "1980-06-30 to 2026-06-30",
+          "n_obs": 185,
+          "real_or_nominal": "nominal"
+        },
+        "Gold": {
+          "value": null,
+          "sample_period": null,
+          "n_obs": 0,
+          "real_or_nominal": "nominal"
+        },
+        "IEF": {
+          "value": -0.1368935505378767,
+          "sample_period": "2002-12-31 to 2026-06-30",
+          "n_obs": 95,
+          "real_or_nominal": "nominal"
+        },
+        "CPI inflation": {
+          "value": 0.05545805329516119,
+          "sample_period": "1980-06-30 to 2026-06-30",
+          "n_obs": 185,
+          "real_or_nominal": "nominal"
+        },
+        "REITs": {
+          "value": 0.051268552236527196,
+          "sample_period": "2004-12-31 to 2026-06-30",
+          "n_obs": 87,
+          "real_or_nominal": "nominal"
+        },
+        "Home prices": {
+          "value": 0.05361931214329506,
+          "sample_period": "1987-06-30 to 2026-06-30",
+          "n_obs": 157,
+          "real_or_nominal": "nominal"
+        },
+        "VIX level": {
+          "value": -0.12101135828830212,
+          "sample_period": "1990-03-31 to 2026-06-30",
+          "n_obs": 146,
+          "real_or_nominal": "nominal"
+        }
+      }
+    },
+    "ARTKIMP_semiannual": {
+      "frequency": "semiannual (Jun/Dec only; no forward-filled quarterly returns)",
+      "correlations": {
+        "S&P 500": {
+          "value": 0.10252506691069922,
+          "sample_period": "1980-12-31 to 2026-06-30",
+          "n_obs": 92,
+          "real_or_nominal": "nominal"
+        },
+        "Gold": {
+          "value": null,
+          "sample_period": null,
+          "n_obs": 0,
+          "real_or_nominal": "nominal"
+        },
+        "IEF": {
+          "value": -0.15232403659067076,
+          "sample_period": "2003-06-30 to 2026-06-30",
+          "n_obs": 47,
+          "real_or_nominal": "nominal"
+        },
+        "CPI inflation": {
+          "value": 0.0869732622674267,
+          "sample_period": "1980-12-31 to 2026-06-30",
+          "n_obs": 92,
+          "real_or_nominal": "nominal"
+        },
+        "REITs": {
+          "value": 0.26276059908685856,
+          "sample_period": "2005-06-30 to 2026-06-30",
+          "n_obs": 43,
+          "real_or_nominal": "nominal"
+        },
+        "Home prices": {
+          "value": 0.13393001373236052,
+          "sample_period": "1987-12-31 to 2026-06-30",
+          "n_obs": 78,
+          "real_or_nominal": "nominal"
+        },
+        "VIX": {
+          "value": 0.09102640124753697,
+          "sample_period": "1990-12-31 to 2026-06-30",
+          "n_obs": 72,
+          "real_or_nominal": "nominal"
+        }
+      }
+    },
+    "ARTKPWC_semiannual": {
+      "frequency": "semiannual (Jun/Dec only; no forward-filled quarterly returns)",
+      "correlations": {
+        "S&P 500": {
+          "value": -0.014224741365860497,
+          "sample_period": "1980-12-31 to 2026-06-30",
+          "n_obs": 92,
+          "real_or_nominal": "nominal"
+        },
+        "Gold": {
+          "value": null,
+          "sample_period": null,
+          "n_obs": 0,
+          "real_or_nominal": "nominal"
+        },
+        "IEF": {
+          "value": 0.04208178762448557,
+          "sample_period": "2003-06-30 to 2026-06-30",
+          "n_obs": 47,
+          "real_or_nominal": "nominal"
+        },
+        "CPI inflation": {
+          "value": 0.09618273941485335,
+          "sample_period": "1980-12-31 to 2026-06-30",
+          "n_obs": 92,
+          "real_or_nominal": "nominal"
+        },
+        "REITs": {
+          "value": 0.37510748056759957,
+          "sample_period": "2005-06-30 to 2026-06-30",
+          "n_obs": 43,
+          "real_or_nominal": "nominal"
+        },
+        "Home prices": {
+          "value": 0.09601767775373209,
+          "sample_period": "1987-12-31 to 2026-06-30",
+          "n_obs": 78,
+          "real_or_nominal": "nominal"
+        },
+        "VIX": {
+          "value": 0.14381493044458174,
+          "sample_period": "1990-12-31 to 2026-06-30",
+          "n_obs": 72,
+          "real_or_nominal": "nominal"
+        }
+      }
+    }
+  }
+}
