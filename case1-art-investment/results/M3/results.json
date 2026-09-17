@@ -1,0 +1,321 @@
+{
+  "methodology": {
+    "frequency": "quarter-end",
+    "returns": "log returns for correlations; simple returns for cumulative returns and 60/40 rebalancing",
+    "art_series": "ARTKAART (All Traded Artists)",
+    "sp500_series": "Yahoo Finance ^GSPC price index",
+    "bond_series": "Yahoo Finance IEF adjusted close; available from 2002, so 60/40 is N/A for Japan and 2008",
+    "recovery_definition": "quarters from an episode's within-window high to first later re-attainment of that high; assessed through the final available observation",
+    "drawdown_definition": "largest peak-to-subsequent-trough loss within each stated episode window"
+  },
+  "episodes": {
+    "japan": {
+      "window": "1986-03-31 to 2000-12-31",
+      "label": "Japanese asset-bubble aftermath",
+      "art": {
+        "available": true,
+        "sample_period": "1986-03-31 to 2000-12-31",
+        "n_obs": 60,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 1.3731237973059653,
+        "max_drawdown": -0.5597041847041847,
+        "peak_date": "1989-12-31",
+        "trough_date": "1995-09-30",
+        "recovery_quarters_from_peak": 40,
+        "recovery_date": "1999-12-31",
+        "unrecovered_through": null
+      },
+      "sp500": {
+        "available": true,
+        "sample_period": "1986-03-31 to 2000-12-31",
+        "n_obs": 60,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 4.526496705851544,
+        "max_drawdown": -0.23226544405434435,
+        "peak_date": "1987-09-30",
+        "trough_date": "1987-12-31",
+        "recovery_quarters_from_peak": 8,
+        "recovery_date": "1989-09-30",
+        "unrecovered_through": null
+      },
+      "p6040": {
+        "available": false
+      },
+      "segment": {
+        "available": true,
+        "sample_period": "1986-06-30 to 2000-12-31",
+        "n_obs": 30,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 3.4478640776699025,
+        "max_drawdown": -0.6514318288511838,
+        "peak_date": "1989-12-31",
+        "trough_date": "1994-06-30",
+        "recovery_quarters_from_peak": 62,
+        "recovery_date": "2005-06-30",
+        "unrecovered_through": null
+      },
+      "segment_name": "ARTKIMP",
+      "art_drawdown": -0.5597041847041847,
+      "segment_drawdown": -0.6514318288511838,
+      "sp_drawdown": -0.23226544405434435,
+      "p6040_drawdown": null,
+      "recovery_quarters": 40
+    },
+    "gfc2008": {
+      "window": "2007-12-31 to 2012-12-31",
+      "label": "Global financial crisis",
+      "art": {
+        "available": true,
+        "sample_period": "2007-12-31 to 2012-12-31",
+        "n_obs": 21,
+        "real_or_nominal": "nominal",
+        "cumulative_return": -0.22506464278873772,
+        "max_drawdown": -0.35114939793441524,
+        "peak_date": "2008-06-30",
+        "trough_date": "2009-03-31",
+        "recovery_quarters_from_peak": null,
+        "recovery_date": null,
+        "unrecovered_through": "2026-06-30"
+      },
+      "sp500": {
+        "available": true,
+        "sample_period": "2007-12-31 to 2012-12-31",
+        "n_obs": 21,
+        "real_or_nominal": "nominal",
+        "cumulative_return": -0.028719145418019454,
+        "max_drawdown": -0.4566250762232824,
+        "peak_date": "2007-12-31",
+        "trough_date": "2009-03-31",
+        "recovery_quarters_from_peak": 21,
+        "recovery_date": "2013-03-31",
+        "unrecovered_through": null
+      },
+      "p6040": {
+        "available": true,
+        "sample_period": "2007-12-31 to 2012-12-31",
+        "n_obs": 21,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.19713614057584383,
+        "max_drawdown": -0.246217670705572,
+        "peak_date": "2007-12-31",
+        "trough_date": "2009-03-31",
+        "recovery_quarters_from_peak": 12,
+        "recovery_date": "2010-12-31",
+        "unrecovered_through": null
+      },
+      "art_drawdown": -0.35114939793441524,
+      "segment_drawdown": null,
+      "sp_drawdown": -0.4566250762232824,
+      "p6040_drawdown": -0.246217670705572,
+      "recovery_quarters": null
+    },
+    "covid2020": {
+      "window": "2019-12-31 to 2021-12-31",
+      "label": "COVID shock",
+      "art": {
+        "available": true,
+        "sample_period": "2019-12-31 to 2021-12-31",
+        "n_obs": 9,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.06622861910721745,
+        "max_drawdown": -0.1454794683830979,
+        "peak_date": "2019-12-31",
+        "trough_date": "2020-06-30",
+        "recovery_quarters_from_peak": 4,
+        "recovery_date": "2020-12-31",
+        "unrecovered_through": null
+      },
+      "sp500": {
+        "available": true,
+        "sample_period": "2019-12-31 to 2021-12-31",
+        "n_obs": 9,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.475241314036019,
+        "max_drawdown": -0.20001050382463903,
+        "peak_date": "2019-12-31",
+        "trough_date": "2020-03-31",
+        "recovery_quarters_from_peak": 3,
+        "recovery_date": "2020-09-30",
+        "unrecovered_through": null
+      },
+      "p6040": {
+        "available": true,
+        "sample_period": "2019-12-31 to 2021-12-31",
+        "n_obs": 9,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.3230943556765917,
+        "max_drawdown": -0.07802252675014765,
+        "peak_date": "2019-12-31",
+        "trough_date": "2020-03-31",
+        "recovery_quarters_from_peak": 2,
+        "recovery_date": "2020-06-30",
+        "unrecovered_through": null
+      },
+      "art_drawdown": -0.1454794683830979,
+      "segment_drawdown": null,
+      "sp_drawdown": -0.20001050382463903,
+      "p6040_drawdown": -0.07802252675014765,
+      "recovery_quarters": 4
+    },
+    "infl2022": {
+      "window": "2021-12-31 to 2024-12-31",
+      "label": "Inflation/rate shock",
+      "art": {
+        "available": true,
+        "sample_period": "2021-12-31 to 2024-12-31",
+        "n_obs": 13,
+        "real_or_nominal": "nominal",
+        "cumulative_return": -0.24815192632858685,
+        "max_drawdown": -0.25423065636310294,
+        "peak_date": "2021-12-31",
+        "trough_date": "2024-09-30",
+        "recovery_quarters_from_peak": null,
+        "recovery_date": null,
+        "unrecovered_through": "2026-06-30"
+      },
+      "sp500": {
+        "available": true,
+        "sample_period": "2021-12-31 to 2024-12-31",
+        "n_obs": 13,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.23403431383044815,
+        "max_drawdown": -0.24769522239058828,
+        "peak_date": "2021-12-31",
+        "trough_date": "2022-09-30",
+        "recovery_quarters_from_peak": 8,
+        "recovery_date": "2023-12-31",
+        "unrecovered_through": null
+      },
+      "p6040": {
+        "available": true,
+        "sample_period": "2021-12-31 to 2024-12-31",
+        "n_obs": 13,
+        "real_or_nominal": "nominal",
+        "cumulative_return": 0.08173087967924797,
+        "max_drawdown": -0.21072795949307888,
+        "peak_date": "2021-12-31",
+        "trough_date": "2022-09-30",
+        "recovery_quarters_from_peak": 9,
+        "recovery_date": "2024-03-31",
+        "unrecovered_through": null
+      },
+      "art_drawdown": -0.25423065636310294,
+      "segment_drawdown": null,
+      "sp_drawdown": -0.24769522239058828,
+      "p6040_drawdown": -0.21072795949307888,
+      "recovery_quarters": null
+    }
+  },
+  "corr_crisis_vs_calm": {
+    "japan": {
+      "sample_period": "1986-03-31 to 1995-12-31",
+      "n_obs": 40,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.05749916647508429,
+      "definition": "quarterly log returns"
+    },
+    "gfc2008": {
+      "sample_period": "2008-06-30 to 2009-12-31",
+      "n_obs": 7,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.3327948998566208,
+      "definition": "quarterly log returns"
+    },
+    "covid2020": {
+      "sample_period": "2020-03-31 to 2020-12-31",
+      "n_obs": 4,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.16084975653559094,
+      "definition": "quarterly log returns"
+    },
+    "infl2022": {
+      "sample_period": "2022-03-31 to 2024-12-31",
+      "n_obs": 12,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.3805987259947893,
+      "definition": "quarterly log returns"
+    },
+    "pooled_crises": {
+      "sample_period": "1986-03-31 to 2024-12-31 (non-contiguous crisis windows)",
+      "n_obs": 63,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.14867244394153245,
+      "definition": "pooled quarterly log returns in the four stated crisis windows"
+    },
+    "calm_periods": {
+      "sample_period": "1980-06-30 to 2026-06-30 (excluding stated crisis windows)",
+      "n_obs": 122,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.21562145019957002,
+      "definition": "quarterly log returns outside the four stated crisis windows"
+    },
+    "modern_crises": {
+      "sample_period": "2008-06-30 to 2024-12-31 (non-contiguous where applicable)",
+      "n_obs": 23,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.30159906011606014,
+      "definition": "GFC, COVID, and inflation/rate crisis windows, 2002 onward"
+    },
+    "modern_calm": {
+      "sample_period": "2002-03-31 to 2026-06-30 (non-contiguous where applicable)",
+      "n_obs": 75,
+      "real_or_nominal": "nominal log returns",
+      "pearson_correlation": 0.10459308940586393,
+      "definition": "quarters outside those three crisis windows, 2002 onward"
+    },
+    "crisis_corr": 0.30159906011606014,
+    "calm_corr": 0.10459308940586393
+  },
+  "japan_art_nikkei_corr": {
+    "sample_period": "1986-06-30 to 1995-12-31",
+    "n_obs": 20,
+    "real_or_nominal": "nominal log returns",
+    "pearson_correlation": 0.2729383891165533,
+    "definition": "ARTKIMP and Nikkei 225 quarterly log returns; ARTKIMP is semiannual, so only matched June/December observations are used"
+  },
+  "segment_concentration": {
+    "imp": {
+      "available": true,
+      "sample_period": "1986-06-30 to 2000-12-31",
+      "n_obs": 30,
+      "real_or_nominal": "nominal",
+      "cumulative_return": 3.4478640776699025,
+      "max_drawdown": -0.6514318288511838,
+      "peak_date": "1989-12-31",
+      "trough_date": "1994-06-30",
+      "recovery_quarters_from_peak": 62,
+      "recovery_date": "2005-06-30",
+      "unrecovered_through": null,
+      "runup_from_first_window_observation_to_peak": 4.790679611650486
+    },
+    "one": {
+      "available": true,
+      "sample_period": "1986-03-31 to 2000-12-31",
+      "n_obs": 60,
+      "real_or_nominal": "nominal",
+      "cumulative_return": 1.7711182899168327,
+      "max_drawdown": -0.8815837559832069,
+      "peak_date": "1991-06-30",
+      "trough_date": "1993-06-30",
+      "recovery_quarters_from_peak": 66,
+      "recovery_date": "2007-12-31",
+      "unrecovered_through": null,
+      "runup_from_first_window_observation_to_peak": 6.711114165922057
+    },
+    "six": {
+      "available": true,
+      "sample_period": "1986-03-31 to 2000-12-31",
+      "n_obs": 60,
+      "real_or_nominal": "nominal",
+      "cumulative_return": 1.574093061862214,
+      "max_drawdown": -0.3716641353872858,
+      "peak_date": "1989-03-31",
+      "trough_date": "1994-03-31",
+      "recovery_quarters_from_peak": 35,
+      "recovery_date": "1997-12-31",
+      "unrecovered_through": null,
+      "runup_from_first_window_observation_to_peak": 1.025340559542991
+    }
+  },
+  "index_blindness": "The supplied ARTDAI history begins in 1980 and captures the Japan episode; a 2000-starting art index would exclude this crisis entirely."
+}

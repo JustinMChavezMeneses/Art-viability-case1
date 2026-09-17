@@ -1,0 +1,181 @@
+{
+  "methodology": {
+    "frequency": "quarterly, quarter-end aligned to ARTKAART",
+    "return_convention": "log returns; inflation is annualized quarterly CPI log inflation",
+    "inference": "OLS coefficients with Newey-West HAC standard errors (maxlags=4)",
+    "primary_art_series": "Bloomberg ARTDAI ARTKAART",
+    "data_sources": "Bloomberg ARTDAI (provided file), FRED CPIAUCSL and T10YIE, Yahoo Finance ^GSPC"
+  },
+  "reg_full": {
+    "label": "Full sample",
+    "specification": "nominal quarterly log art return = alpha + realized CPI inflation + S&P 500 quarterly log return",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "market_definition": "^GSPC quarter-over-quarter log price return",
+    "beta_inflation": -0.057910182472216076,
+    "se_hac": 0.324577781325443,
+    "t_vs_0": -0.17841696445066127,
+    "t_vs_1": -3.2593425777702443,
+    "p_vs_1_two_sided": 0.0011167073483016833,
+    "ci_95_hac": [
+      -0.6940826338700843,
+      0.5782622689256522
+    ],
+    "r2": 0.03590058216093073,
+    "n_obs": 185,
+    "sample_period": "1980Q2 to 2026Q2",
+    "real_or_nominal": "nominal",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": 0.003454996309919585,
+      "inflation": -0.057910182472216076,
+      "mkt_ret": 0.3613414948922715
+    },
+    "hac_standard_errors": {
+      "const": 0.01049604733024591,
+      "inflation": 0.324577781325443,
+      "mkt_ret": 0.12571513097851403
+    }
+  },
+  "reg_2003plus": {
+    "label": "2003+ with expected inflation",
+    "specification": "nominal quarterly log art return = alpha + realized CPI inflation + change in 10Y breakeven inflation + S&P 500 quarterly log return",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "market_definition": "^GSPC quarter-over-quarter log price return",
+    "beta_inflation": 0.039526972378454484,
+    "se_hac": 0.3683623293701389,
+    "t_vs_0": 0.1073045999194366,
+    "t_vs_1": -2.607413817976051,
+    "p_vs_1_two_sided": 0.009122903248460091,
+    "ci_95_hac": [
+      -0.6824631931870178,
+      0.7615171379439267
+    ],
+    "r2": 0.04645530209424653,
+    "n_obs": 93,
+    "sample_period": "2003Q2 to 2026Q2",
+    "real_or_nominal": "nominal",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": 6.763939668839175e-05,
+      "inflation": 0.039526972378454484,
+      "delta_expected_inflation": 5.90146914149034,
+      "mkt_ret": 0.11186037917706985
+    },
+    "hac_standard_errors": {
+      "const": 0.011639792146828363,
+      "inflation": 0.3683623293701389,
+      "delta_expected_inflation": 4.517749378125177,
+      "mkt_ret": 0.1999756508459534
+    }
+  },
+  "reg_pre2000": {
+    "label": "Pre-2000",
+    "specification": "nominal quarterly log art return = alpha + realized CPI inflation + S&P 500 quarterly log return",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "market_definition": "^GSPC quarter-over-quarter log price return",
+    "beta_inflation": -0.6069792573378069,
+    "se_hac": 0.637915335198215,
+    "t_vs_0": -0.9515044142169814,
+    "t_vs_1": -2.5191105600847195,
+    "p_vs_1_two_sided": 0.011765170790932606,
+    "ci_95_hac": [
+      -1.8572933143263084,
+      0.6433347996506945
+    ],
+    "r2": 0.04080971782773857,
+    "n_obs": 79,
+    "sample_period": "1980Q2 to 1999Q4",
+    "real_or_nominal": "nominal",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": 0.028563982420994186,
+      "inflation": -0.6069792573378069,
+      "mkt_ret": 0.4202392863517076
+    },
+    "hac_standard_errors": {
+      "const": 0.030122049814489633,
+      "inflation": 0.637915335198215,
+      "mkt_ret": 0.2765277633854363
+    }
+  },
+  "reg_2000plus": {
+    "label": "2000+",
+    "specification": "nominal quarterly log art return = alpha + realized CPI inflation + S&P 500 quarterly log return",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "market_definition": "^GSPC quarter-over-quarter log price return",
+    "beta_inflation": 0.24497025752984228,
+    "se_hac": 0.3928789021817135,
+    "t_vs_0": 0.6235261200575722,
+    "t_vs_1": -1.9217874471684993,
+    "p_vs_1_two_sided": 0.05463250847460649,
+    "ci_95_hac": [
+      -0.5250723907463162,
+      1.0150129058060007
+    ],
+    "r2": 0.04133520212852193,
+    "n_obs": 106,
+    "sample_period": "2000Q1 to 2026Q2",
+    "real_or_nominal": "nominal",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": -0.007779253770330792,
+      "inflation": 0.24497025752984228,
+      "mkt_ret": 0.27900192368182164
+    },
+    "hac_standard_errors": {
+      "const": 0.010367643257552269,
+      "inflation": 0.3928789021817135,
+      "mkt_ret": 0.12739232999006525
+    }
+  },
+  "reg_highinfl": {
+    "label": "High inflation (>4% annualized CPI)",
+    "specification": "nominal quarterly log art return = alpha + realized CPI inflation + S&P 500 quarterly log return",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "market_definition": "^GSPC quarter-over-quarter log price return",
+    "beta_inflation": -0.03126347445469707,
+    "se_hac": 0.6657623587997186,
+    "t_vs_0": -0.04695890964917419,
+    "t_vs_1": -1.5489963660816282,
+    "p_vs_1_two_sided": 0.12138259363637197,
+    "ci_95_hac": [
+      -1.3361576977021454,
+      1.2736307487927512
+    ],
+    "r2": 0.04922923903609866,
+    "n_obs": 49,
+    "sample_period": "1980Q2 to 2026Q1",
+    "real_or_nominal": "nominal",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": -0.01577052001389428,
+      "inflation": -0.03126347445469707,
+      "mkt_ret": 0.4933101382662072
+    },
+    "hac_standard_errors": {
+      "const": 0.05563374046620515,
+      "inflation": 0.6657623587997186,
+      "mkt_ret": 0.27268475931955655
+    }
+  },
+  "real_return_inflation_beta": {
+    "specification": "real quarterly log art return = alpha + realized CPI inflation",
+    "inflation_definition": "CPIAUCSL quarter-over-quarter log change, annualized (4 \u00d7 log change)",
+    "beta_inflation": -1.0140407103486329,
+    "se_hac": 0.3409312948926975,
+    "t_vs_0": -2.974325694177724,
+    "r2": 0.03215187690514543,
+    "n_obs": 185,
+    "sample_period": "1980Q2 to 2026Q2",
+    "real_or_nominal": "real",
+    "hac_lags": 4,
+    "coefficients": {
+      "const": 0.010497038389556103,
+      "inflation": -1.0140407103486329
+    },
+    "hac_standard_errors": {
+      "const": 0.011583356063338258,
+      "inflation": 0.3409312948926975
+    }
+  }
+}
